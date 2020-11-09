@@ -1,0 +1,8 @@
+.form__remember-wrapper {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 425px) {
+    margin-bottom: 18px;
+  }
+}

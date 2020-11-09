@@ -1,0 +1,15 @@
+.form__services {
+  width: 321px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 23px;
+
+  @media screen and (max-width: 490px) {
+    width: calc(100% - 45px);
+  }
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+  }
+}
