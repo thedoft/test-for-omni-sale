@@ -1,0 +1,10 @@
+.form__input_is-valid_false,
+.form__input_is-valid_false:focus{
+  color: #b40000;
+  background: $main-color url(../../../../images/error.png) no-repeat calc(100% - 10px);
+
+  @media screen and (max-width: 425px) {
+    background-size: auto 60%;
+    background-position: calc(100% - 6px);
+  }
+}

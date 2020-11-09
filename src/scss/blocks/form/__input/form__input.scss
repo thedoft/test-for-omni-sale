@@ -1,0 +1,47 @@
+.form__input {
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 18px;
+  margin: 0;
+  background-color: transparent;
+  border: rgba(255, 255, 255, .4) 1px solid;
+  border-radius: $border-radius;
+  text-align: center;
+  color: $main-color;
+  font-size: 18px;
+  line-height: 1.16;
+  transition: $transform-colors;
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 1.16;
+    color: $main-color;
+    opacity: .4;
+    transition: $transform-colors;
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    background-color: $main-color;
+    color: $second-color;
+    transition: $transform-colors;
+  }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: $second-color;
+    transition: $transform-colors;
+  }
+
+  @media screen and (max-width: 425px) {
+    min-height: 40px;
+    font-size: 16px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+}
