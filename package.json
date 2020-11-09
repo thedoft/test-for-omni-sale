@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Test for Omni Sale",
   "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
   "babel": {
     "presets": [
       "@babel/preset-env"

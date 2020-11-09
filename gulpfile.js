@@ -38,7 +38,6 @@ gulp.task('css', function() {
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['> 0.1%'],
       cascade: false
     }))
     .pipe(csso())
