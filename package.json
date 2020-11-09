@@ -1,7 +1,7 @@
 {
-  "name": "test-gulp",
+  "name": "test-for-omni-sale",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test for Omni Sale",
   "main": "index.js",
   "babel": {
     "presets": [
@@ -19,6 +19,7 @@
     "gulp-cache": "^1.1.3",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-rollup": "^2.17.0",
@@ -34,6 +35,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "thedoft",
   "license": "ISC"
 }

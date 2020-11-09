@@ -21,7 +21,8 @@ const config = {
   tunnel: false,
   host: 'localhost',
   port: 3333
-}
+};
+const ghPages = require('gulp-gh-pages');
 
 gulp.task('clearBuild', function() {
   return del(['build/*'])
@@ -100,5 +101,10 @@ gulp.task('build',
     gulp.parallel('html', 'css', 'scripts', 'images', 'fonts')
   )
 );
+
+gulp.task('deploy', function() {
+  return gulp.src('build/**/*')
+    .pipe(ghPages());
+});
 
 gulp.task('default', gulp.series('build', 'watch'));
