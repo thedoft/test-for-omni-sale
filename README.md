@@ -1,1 +1,1 @@
-# test-for-omni-sale
+# Тестовое задание в компанию Omni Sale
