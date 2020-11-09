@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Тестовое задание в компанию Omni Sale">
+  <meta name="keywords" content="Форма">
+  <meta name="author" content="Игорь Шишлов">
+  <title>Форма авторизации</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+  <main class="page">
+
+    <form class="form" name="form" action="https://example.com/auth" method="post" enctype="multipart/form-data">
+      <div class="form__back-wrapper">
+        <a href="#" class="form__back-link" ></a>
+        <p class="form__back-text">Вернуться</p>
+      </div>
+      <img class="logo" src="./images/logo.png" alt="Логотип">
+
+      <fieldset class="form__fieldset">
+        <input type="text" name="phone" class="form__input form__input_type_phone" placeholder="Номер телефона" required pattern="[0-9]{11}" maxlength="11">
+
+        <label class="form__input-label" for="password">
+          <input type="password" id="password" name="password" class="form__input form__input_type_password" placeholder="Пароль" required minlength="5">
+          <span class="form__password-mask"></span>
+        </label>
+      </fieldset>
+
+      <div class="form__services">
+        <div class="form__remember-wrapper">
+          <label class="checkbox" for="switch">
+            <input name="remember" class="checkbox__input" type="checkbox" id="switch">
+            <span class="checkbox__visible-checkbox"></span>
+          </label>
+          <p class="form__text">Запомнить</p>
+        </div>
+        <a href="#" class="form__link">Забыл пароль</a>
+      </div>
+      <button type="submit" class="form__submit">Войти</button>
+    </form>
+
+  </main>
+  <script src="./js/main.min.js" type="module"></script>
+</body>
+</html>
