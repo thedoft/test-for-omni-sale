@@ -8,26 +8,31 @@
   <meta name="author" content="Игорь Шишлов">
   <title>Форма авторизации</title>
   <link rel="stylesheet" href="./css/main.min.css">
-</head>
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
 <body>
   <main class="page">
-
     <form class="form" name="form" action="https://example.com/auth" method="post" enctype="multipart/form-data">
       <div class="form__back-wrapper">
-        <a href="#" class="form__back-link" ></a>
+        <a href="#" class="form__back-link"></a>
         <p class="form__back-text">Вернуться</p>
       </div>
       <img class="logo" src="./images/logo.png" alt="Логотип">
-
       <fieldset class="form__fieldset">
         <input type="text" name="phone" class="form__input form__input_type_phone" placeholder="Номер телефона" required pattern="[0-9]{11}" maxlength="11">
-
         <label class="form__input-label" for="password">
           <input type="password" id="password" name="password" class="form__input form__input_type_password" placeholder="Пароль" required minlength="5">
           <span class="form__password-mask"></span>
         </label>
       </fieldset>
-
       <div class="form__services">
         <div class="form__remember-wrapper">
           <label class="checkbox" for="switch">
@@ -40,7 +45,6 @@
       </div>
       <button type="submit" class="form__submit">Войти</button>
     </form>
-
   </main>
   <script src="./js/main.min.js" type="module"></script>
 </body>
