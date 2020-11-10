@@ -1,5 +1,3 @@
-import { phoneInput } from "./constants";
-
 export const maskPhone = phoneInput => {
   window.addEventListener('DOMContentLoaded', () => {
     phoneInput.setAttribute('pattern', '[0-9][ -].[ -][0-9]{3}[ -].[ -][0-9]{3}[ -][0-9]{2}[ -][0-9]{2}');
