@@ -2,7 +2,6 @@
   cursor: pointer;
   box-sizing: border-box;
   width: 100%;
-  min-height: 48px;
   padding: 0 18px;
   margin: 0;
   background-color: transparent;
@@ -11,12 +10,12 @@
   text-align: center;
   color: $main-color;
   font-size: 18px;
-  line-height: 1.16;
+  line-height: 48px;
   transition: $transform-colors;
 
   &::placeholder {
     font-size: 18px;
-    line-height: 1.16;
+    line-height: 48px;
     color: $main-color;
     opacity: .4;
     transition: $transform-colors;
@@ -37,11 +36,7 @@
   }
 
   @media screen and (max-width: 425px) {
-    min-height: 40px;
     font-size: 16px;
-
-    &::placeholder {
-      font-size: 16px;
-    }
+    line-height: 40px;
   }
 }
