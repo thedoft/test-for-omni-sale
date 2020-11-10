@@ -4,7 +4,7 @@ export const maskPassword = (
   maskElement,
   maskElementSelector
 ) => {
-  document.querySelector('.form__input_type_password').style.color = 'transparent';
+  passwordInput.style.color = 'transparent';
 
   passwordInput.addEventListener('keydown', evt => {
     const maskElements = Array.from(passwordMask.querySelectorAll(maskElementSelector));

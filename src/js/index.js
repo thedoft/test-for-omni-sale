@@ -1,5 +1,6 @@
 import {
   formElement,
+  phoneInput,
   passwordInput,
   passwordMask,
   maskElement,
@@ -11,7 +12,7 @@ import { maskPassword } from './utils/maskPassword.js';
 import Form from './components/Form.js';
 import FormValidator from './components/FormValidator.js';
 
-maskPhone();
+maskPhone(phoneInput);
 maskPassword(
   passwordInput,
   passwordMask,
