@@ -168,8 +168,8 @@ gulp.task('watch', function() {
 
 gulp.task('build',
   gulp.series('clearBuild',
-    gulp.parallel('html', 'css', 'scripts', 'images', 'fonts'),
-    'set-favicon')
+    gulp.parallel('html', 'css', 'scripts', 'images', 'fonts')
+  )
 );
 
 gulp.task('deploy', function() {
