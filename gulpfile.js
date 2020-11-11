@@ -2,11 +2,12 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 const del = require('del');
 const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 const imagemin = require('gulp-imagemin');
 const jpegRecompress = require('imagemin-jpeg-recompress');
 const pngquant = require('imagemin-pngquant');
-const csso = require('gulp-csso');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const sourcemap = require('gulp-sourcemaps');
@@ -40,10 +41,10 @@ gulp.task('css', function() {
   return gulp.src(['src/vendor/normalize.css', 'src/scss/index.scss'])
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      cascade: false
-    }))
-    .pipe(csso())
+    .pipe(postcss([
+      autoprefixer(),
+      cssnano()
+    ]))
     .pipe(concat('index.css'))
     .pipe(rename('main.min.css'))
     .pipe(sourcemap.write('../maps'))
@@ -56,7 +57,9 @@ gulp.task('scripts', function() {
     .pipe(sourcemap.init())
     .pipe(rollup({
       input: './src/js/index.js',
-      format: 'esm'
+      output: {
+        format: 'esm'
+      }
     }))
     .pipe(babel({
       presets: ['@babel/preset-env']
