@@ -1,22 +1,20 @@
 export const maskPassword = (
-  passwordInput,
-  passwordMask,
+  input,
+  maskContainer,
   maskElement,
   maskElementSelector
 ) => {
-  passwordInput.style.color = 'transparent';
-
-  passwordInput.addEventListener('keydown', evt => {
-    const maskElements = Array.from(passwordMask.querySelectorAll(maskElementSelector));
+  input.addEventListener('keydown', evt => {
+    const maskElements = Array.from(maskContainer.querySelectorAll(maskElementSelector));
 
     if ((evt.key === 'Backspace') && (maskElements[maskElements.length - 1] !== undefined)) {
       maskElements[maskElements.length -1].remove();
     }
   });
 
-  passwordInput.addEventListener('keypress', evt => {
+  input.addEventListener('keypress', evt => {
     if (evt.key !== 'Enter') {
-      passwordMask.insertAdjacentHTML('beforeend', maskElement);
+      maskContainer.insertAdjacentHTML('beforeend', maskElement);
     }
   });
 }

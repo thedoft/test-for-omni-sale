@@ -1,7 +1,7 @@
 export const formElement = document.querySelector('.form'),
 phoneInput = document.querySelector('.form__input_type_phone'),
 passwordInput = document.querySelector('.form__input_type_password'),
-passwordMask = document.querySelector('.form__password-mask'),
+passwordMaskContainer = document.querySelector('.form__password-mask'),
 maskElement = '<span class="form__password-star"></span>',
 maskElementSelector = '.form__password-star',
 configObject = {

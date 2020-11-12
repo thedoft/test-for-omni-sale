@@ -2,7 +2,7 @@ import {
   formElement,
   phoneInput,
   passwordInput,
-  passwordMask,
+  passwordMaskContainer,
   maskElement,
   maskElementSelector,
   configObject
@@ -12,18 +12,22 @@ import { maskPassword } from './utils/maskPassword.js';
 import Form from './components/Form.js';
 import FormValidator from './components/FormValidator.js';
 
+// для корректной работы при отключенном JS
+formElement.setAttribute('novalidate', true);
+phoneInput.setAttribute('pattern', '[0-9][ -].[ -][0-9]{3}[ -].[ -][0-9]{3}[ -][0-9]{2}[ -][0-9]{2}');
+phoneInput.setAttribute('maxlength', 19);
+passwordInput.style.color = 'transparent';
+
 maskPhone(phoneInput);
 maskPassword(
   passwordInput,
-  passwordMask,
+  passwordMaskContainer,
   maskElement,
   maskElementSelector
 );
 
 const formValidator = new FormValidator({ formElement, configObject });
 formValidator.enableValidation();
-
-formElement.setAttribute('novalidate', true);
 
 const form = new Form({
   formElement,
